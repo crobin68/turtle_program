@@ -10,5 +10,4 @@ artwork.color("white")
 artwork.pendown()
 
 
-
 turtle.exitonclick()
