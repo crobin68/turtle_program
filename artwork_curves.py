@@ -22,7 +22,7 @@ def random_color():
 
 
 
-change = 100000
+change = 100
 
 artwork.speed(0)
 for __ in range(20):
