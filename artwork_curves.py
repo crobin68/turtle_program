@@ -10,41 +10,30 @@ artwork = turtle.Turtle()
 artwork.color("white")
 artwork.pendown()
 
-
-# make turtle random colors
+# Make turtle random colors
 def random_color():
     r = random.random()
     g = random.random()
     b = random.random()
     return (r, g, b)
 
-
-
-
-
-change = 100
-
 artwork.speed(0)
-for __ in range(20):
-    artwork.color(random_color())
-    for _ in range(70):
-        
-        artwork.forward(10)
-        artwork.right(5)
-        
 
+# Variables for spiral parameters
+length = 10
+angle = 90
+increment = 2
+clockwise = True  # Start with clockwise rotation
 
+# Draw spiral
+for Sprial in range(200):
+    artwork.forward(length)
+    if clockwise:
+        artwork.left(angle)
+    else:
+        artwork.right(angle)
+    length += increment
+    artwork.color(random_color())  # Set random color for each segment of the spiral
+    print(artwork.position())
 
-
-
-
-
-
-
-
-
-
-
-
-
-turtle.exitonclick()
+turtle.done()
