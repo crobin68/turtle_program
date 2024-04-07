@@ -2,7 +2,10 @@ import turtle
 import random
 import time
 
-
+# Set up the screen
+wn = turtle.Screen()
+wn.setup(width=700, height=700)
+wn.bgcolor("black")
 
 
 # Function to move the turtle randomly
@@ -23,24 +26,18 @@ def move_randomly(turtle, x_bound, y_bound):
 
 # make bob random colors
 def random_color():
-    r = random.random()
-    g = random.random()
-    b = random.random()
-    return (r, g, b)
+    return tuple(random.random() for _ in range(3))
 
 #making the background a rainbow
 def background_color_change():
     wn.bgcolor(random_color())
-
+for BGcolor in range(3):
+    background_color_change()
 # make the cmd colors
 def random_color_code():
     colors = ["\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[35m", "\033[36m"]
     return random.choice(colors)
 
-# Set up the screen
-wn = turtle.Screen()
-wn.setup(width=700, height=700)
-wn.bgcolor("black")
 
 
 
@@ -159,7 +156,7 @@ r = 0
 x = 0
 loop_count = 1
 for MainCode in range(10):
-
+    wn.bgcolor(random_color())
     r += 5
     x = 1   # how many times the code runs
     bob.hideturtle()

@@ -27,7 +27,7 @@ def move_forward():
 
     x = 0 #seet the pos for alex on the x plane
     y = 0 #set the pos for alex on the y plane
-    alex.setheading(90)
+    
     alex.color(random_color())
 
     for loop in range(1):
@@ -47,31 +47,6 @@ def move_forward():
 
 wn.listen()
 wn.onkeypress(move_forward, "a")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
